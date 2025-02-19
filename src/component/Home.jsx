@@ -3,7 +3,7 @@ import "../App.css";
 const Home = () => {
   return (
     <>
-    <div>
+    <div className="mt-26">
       <div>
         <div className="h-96 flex alien-center ">
           <div className="flex items-center mt-95 z-10">
