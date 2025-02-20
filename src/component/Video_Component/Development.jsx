@@ -27,7 +27,7 @@ const Development = () => {
               />
             </div>
 
-            <div className="relative w-full h-500 mt-10">
+            <div className="relative w-full h-500 mt-10 overflow-hidden">
               {/* Left side div */}
               <div className="absolute top-0 left-0">
                 <div class="triangle-bottomleft flex justify-baseline items-center">

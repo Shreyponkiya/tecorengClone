@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./Stories.css";
 const Stories = () => {
   const [iscardHover, setiscardHover] = React.useState("");
   const [Hovercardindex, setHovercardindex] = React.useState(0);
@@ -25,8 +25,8 @@ const Stories = () => {
   ];
   return (
     <div className="mb-20">
-      <h1 className="text-white text-6xl">Our Success Stories</h1>
-      <div className="flex">
+      <h1 className="text-white text-6xl name">Our Success Stories</h1>
+      <div className="flex" id="change-div">
         {card.map((item, index) => (
           <div
             key={index}
@@ -39,18 +39,20 @@ const Stories = () => {
               setHovercardindex("");
             }}
             className=" pl-6 mt-10 h-30 items-center rounded-3xl"
+            id="main-div"
           >
             {iscardHover && Hovercardindex === item.title ? (
               <></>
             ) : (
               <div
-                className="h-132 rounded-3xl "
+                id="card-div"
+                className="h-132 rounded-3xl"
                 style={{ backgroundColor: "#112542" }}
               >
                 <img src={item.image} alt="" width={4000} height={500} />
                 <div className="ml-8">
-                  <h1 className="text-white text-2xl my-3">{item.title}</h1>
-                  <p className="text-white text-sm pr-2">{item.dec}</p>
+                  <h1 className="text-white text-2xl my-3 name">{item.title}</h1>
+                  <p className="text-white text-sm pr-2 pera">{item.dec}</p>
                 </div>
               </div>
             )}
@@ -73,13 +75,30 @@ const Stories = () => {
                         className="rounded-3xl"
                       ></video>
                       <div className="ml-8">
-                        <h1 className="text-white text-2xl my-3">{i.title}</h1>
-                        <p className="text-white text-sm pr-2">{i.dec}</p>
+                        <h1 className="text-white text-2xl my-3 name">{i.title}</h1>
+                        <p className="text-white text-sm pr-2 pera" >{i.dec}</p>
                       </div>
                     </div>
                   ))}
               </div>
             )}
+          </div>
+        ))}
+      </div>
+      <div className="" style={{ display: "none" }} id="vible">
+        {card.map((item, index) => (
+          <div className=" pl-6 mt-10 h-150 items-center rounded-3xl" key={index}>
+            <div
+              id="vible-card-div"
+              className="h-132 rounded-3xl"
+              style={{ backgroundColor: "#112542" }}
+            >
+              <img src={item.image} alt="" width={400} height={500} />
+              <div className="ml-8">
+                <h1 className="text-white text-2xl my-3 name">{item.title}</h1>
+                <p className="text-white text-sm pr-2 pera">{item.dec}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

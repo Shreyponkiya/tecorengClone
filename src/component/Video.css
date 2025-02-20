@@ -74,11 +74,16 @@
     width: 90%;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 910px) {
   #div1{
-    width: 100%;
+    width: 94%;
   }
   #div2{
-    width: 100%;
+    width: 94%;
   }
 }
+@media (max-width: 425px) {
+  #other-div{
+    top:1000px
+  }
+} 

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Why_tecoreng.css";
 const Why_tecoreng = () => {
   const functionallity2 = [
     { isimage: true, image: "asset 34.webp", data: "Reporting & Analysis" },
@@ -16,12 +16,12 @@ const Why_tecoreng = () => {
       style={{ backgroundColor: "#112542" }}
       className="flex justify-center items-center pb-20 mb-20 shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
     >
-      <div className="w-5/6 mt-7">
+      <div className="w-6/7 mt-7">
         <div className="justify-between items-center">
           <h1 className="text-7xl text-white mb-5">
             WHY TECORENG FOR YOUE NEXT PROJECT
           </h1>
-          <p className="text-white pt-4 mr-70">
+          <p className="text-white pt-4 mr-50">
             Introducing Technical Core Engineers (TCE), the intersection of
             technology and innovation. At TCE, we excel in delivering
             exceptional IT services customized to fulfill your development
@@ -38,21 +38,22 @@ const Why_tecoreng = () => {
           </button>
         </div>
         <div className="">
-          <div className="flex flex-wrap gap-5 ">
+          <div className="flex flex-wrap gap-4 justify-center">
             {functionallity2.map((item, index) => (
               <div
                 key={index}
+                id="why-size"
                 className="h-30 w-70 rounded-2xl mb-8 shadow-[0_35px_35px_rgba(0,0,0,0.25)] text-center flex justify-center items-center functionallity"
               >
                 <div className="flex-col">
                   {item.isimage ? (
                     <div className="flex justify-center items-center">
-                      <img src={item.image} alt="" />
+                      <img src={item.image} alt="" id="why-img" />
                     </div>
                   ) : (
                     <h1></h1>
                   )}
-                  <h1 className="text-white">{item.data}</h1>
+                  <h1 className="text-white why-name">{item.data}</h1>
                 </div>
               </div>
             ))}

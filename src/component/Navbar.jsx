@@ -46,8 +46,8 @@ const Navbar = () => {
           <li id="text-bar">Career</li>
           <li id="text-bar">Portfolio</li>
           <li id="text-bar">Blog</li>
-          <li className="invisible" id="icon-bar">
-            <img src="asset 2.svg" onClick={Navbar_Button} alt="" />
+          <li className="visible" id="icon-bar">
+            <img src="asset 2.svg" onClick={Navbar_Button} alt=""/>
           </li>
         </ul>
         <div className="flex gap-4.5" id="text-bar">

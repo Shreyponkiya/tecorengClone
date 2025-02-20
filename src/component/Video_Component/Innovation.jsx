@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Innovation.css"
 const Innovation = () => {
   return (
     <div
@@ -7,7 +7,7 @@ const Innovation = () => {
       className="flex justify-center items-center pb-20 mb-20 z-20"
     >
       <div className="w-5/6 mt-7">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center" id="innovation-div">
           <div>
             <h1 className="text-6xl text-white leading-tight">
               Transfer your <br /> enterprise with digital <br /> innovation
@@ -22,7 +22,7 @@ const Innovation = () => {
               development processes, and we will fuel your concepts to manifest
               as groundbreaking disruptions.
             </p>
-            <button className="bg-orange-500 bg-gradient-to-r duration-500 from-orange-300 to-orange-600 py-3 px-6 text-3xl z-50 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 text-white font-semibold rounded-2xl">
+            <button id="innovation-btn" className="bg-orange-500 bg-gradient-to-r duration-500 from-orange-300 to-orange-600 py-3 px-6 text-3xl z-50 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 text-white font-semibold rounded-2xl">
               HIRE NOW
             </button>
           </div>

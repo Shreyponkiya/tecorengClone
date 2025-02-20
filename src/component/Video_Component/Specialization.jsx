@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Specialization.css"
 const Specialization = () => {
   const [currentCard, setCurrentCard] = React.useState(0);
   const Special = [
@@ -49,6 +49,7 @@ const Specialization = () => {
         a number of services. We specialize in the following services:
       </p>
       <div className="flex justify-between">
+        {/* Left Card */}
         <div
           className="border-2 bg-gray-400 border-gray-700 mt-30 rounded-3xl h-65 w-80 items-center justify-center cursor-pointer"
           onClick={handlePrevCard}
@@ -57,12 +58,13 @@ const Specialization = () => {
             <img
               src={Special[leftIndex].image}
               alt="Left Card"
-              height={35}
-              width={35}
               className="py-5"
+              id="icon-img1"
+              height={22}
+              width={22}
             />
-            <h1 className="font-semibold py-3">{Special[leftIndex].data}</h1>
-            <p className="text-xs text-center px-3">{Special[leftIndex].dec}</p>
+            <h1 className="font-semibold py-3 name text-center" id="card-name">{Special[leftIndex].data}</h1>
+            <p className="text-xs text-center px-3" id="card-pera">{Special[leftIndex].dec}</p>
           </div>
         </div>
 
@@ -72,14 +74,15 @@ const Specialization = () => {
             <img
               src={Special[currentCard].image}
               alt="Current Card"
+              className="py-8"
+              id="icon-img"
               height={50}
               width={50}
-              className="py-8"
             />
-            <h1 className="text-2xl font-semibold py-3">
+            <h1 className="text-2xl font-semibold py-3" id="card-name1">
               {Special[currentCard].data}
             </h1>
-            <p className="text-center px-3">{Special[currentCard].dec}</p>
+            <p className="text-center px-3" id="card-pera1">{Special[currentCard].dec}</p>
           </div>
         </div>
 
@@ -92,12 +95,13 @@ const Specialization = () => {
             <img
               src={Special[rightIndex].image}
               alt="Right Card"
-              height={35}
-              width={35}
               className="py-5"
+              id="icon-img1"
+              height={22}
+              width={22}
             />
-            <h1 className="font-semibold py-3">{Special[rightIndex].data}</h1>
-            <p className="text-xs text-center px-3">
+            <h1 className="font-semibold py-3 text-center" id="card-name">{Special[rightIndex].data}</h1>
+            <p className="text-xs text-center px-3" id="card-pera">
               {Special[rightIndex].dec}
             </p>
           </div>

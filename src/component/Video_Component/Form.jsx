@@ -1,6 +1,6 @@
 import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import "./Form.css"
 const Form = () => {
   function onChange(value) {
     console.log("Captcha value:", value);
@@ -25,12 +25,12 @@ const Form = () => {
     <div className="overflow-hidden">
       <div className="shadow-[rgba(255,255,255,0.76)]">
         <h1 className="text-white text-6xl mt-20">Tecoreng insights</h1>
-        <div className="flex justify-between mt-25">
-          <div className="ml-2">
-            <h1 className="text-3xl text-white font-semibold">
+        <div className="flex justify-between mt-25" id="main-div" style={{display:"flex"}}>
+          <div className="ml-2" id="side-text-div">
+            <h1 className="text-3xl text-white font-semibold form-name1">
               We Are Here To Help You
             </h1>
-            <h1 className="text-5xl text-white font-semibold mt-15 pr-30 leading-relaxed">
+            <h1 className="text-5xl text-white font-semibold mt-15 pr-30 leading-relaxed form-name2">
               Let's Transform Your Vision Into Value.
             </h1>
             <p className="text-xl mt-5 font-semibold text-white">Contact us</p>
@@ -60,9 +60,9 @@ const Form = () => {
               </div>
             </div>
           </div>
-          <div className="h-210 bg-white rounded-4xl mb-20" id="size">
+          <div className="h-210 bg-white rounded-4xl mb-20" id="form-size">
             <div className="m-10">
-              <h1 className="text-6xl font-semibold">
+              <h1 className="text-6xl font-semibold inner-name1">
                 Get in{" "}
                 <span className="text-orange-500 gradient-to-r from-orange-300 to-orange-600">
                   touch
@@ -117,8 +117,10 @@ const Form = () => {
                       className="border-1 border-dashed border-gray-600 h-30 flex justify-center items-center"
                       id="file"
                     >
-                      <img src="asset 67.svg" alt="" width={20} height={20}/>
-                      <p className="text-xs text-gray-500 pl-1">Upload Additional file</p>
+                      <img src="asset 67.svg" alt="" width={20} height={20} />
+                      <p className="text-xs text-gray-500 pl-1">
+                        Upload Additional file
+                      </p>
                     </div>
                   </div>
                   <div className="mt-10">
@@ -133,7 +135,7 @@ const Form = () => {
                     />
                   </div>
                   <div className="mt-8 mb-12">
-                    <button className="rounded-2xl px-50 py-3 text-white text-3xl font-semibold bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 duration-400">
+                    <button className="form-btn-size rounded-2xl px-50 py-3 text-white text-3xl font-semibold bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 duration-400">
                       SUBMIT
                     </button>
                   </div>

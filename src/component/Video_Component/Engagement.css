@@ -1,0 +1,17 @@
+@media (max-width: 1111px) {
+    .eng-name{
+        font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #top-main-div{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    #changer-div{
+        display: inline !important;
+    }
+  }

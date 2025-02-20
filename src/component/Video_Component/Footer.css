@@ -7,3 +7,51 @@
 #call_list{
     list-style-image: url("asset 70.webp");
 }
+
+@media (max-width: 992px) {
+    .invi{
+        display: none;
+    }    
+    #main-div{
+        display: block;
+    }
+    #copyright{
+        font-size: 1rem;
+    }
+    .name1{
+        font-size:1.8rem;
+    }
+    #footer-icon{
+        gap: 0.7rem;
+    }
+    #footer-img{
+        width: 140px;
+    }
+}
+
+@media (max-width: 620px) {
+    #footer-img{
+        display: none;
+    }
+    #copyright{
+        font-size: 1rem;
+        padding-bottom: 8px;
+    }
+    #footer-icon{
+        gap: 1.2rem;
+    }
+    #footer-footer-div{
+        display: inline;
+    }
+    .copy-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:425px) {
+    #infect-div{
+        top: 1000px;
+    }
+}

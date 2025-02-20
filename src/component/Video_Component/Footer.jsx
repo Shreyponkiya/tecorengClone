@@ -4,14 +4,14 @@ const Footer = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="w-full">
-        <div className="relative top-100">
+        <div className="relative top-100" id="infect-div">
           <div
             style={{ backgroundColor: "#112542", position: "relative" }}
             className="z-20"
           >
-            <div className="flex justify-between w-5/6 mx-auto gap-5 pt-10 pb-5 border-b-1 border-white">
-              <div>
-                <h1 className="text-2xl text-white border-b-1 border-dashed">
+            <div className="flex justify-between w-5/6 mx-auto gap-5 pt-10 pb-5 border-b-1 border-white" id="main-div">
+              <div >
+                <h1 className="text-2xl text-white border-b-1 border-dashed name1">
                   Features menu
                 </h1>
                 <ul className="text-white list-none">
@@ -22,7 +22,7 @@ const Footer = () => {
                   <li className="mt-3">Who We Are</li>
                 </ul>
               </div>
-              <div>
+              <div className="invi">
                 <h1 className="text-2xl text-white border-b-1 border-dashed">
                   Service Menu
                 </h1>
@@ -34,7 +34,7 @@ const Footer = () => {
                   <li className="mt-3">Graphics Design</li>
                 </ul>
               </div>
-              <div>
+              <div className="invi">
                 <ul className="text-white list-none mt-12">
                   <li className="mt-3">DevOps</li>
                   <li className="mt-3">E-Commerce</li>
@@ -42,8 +42,8 @@ const Footer = () => {
                   <li className="mt-3">Cloud Computing</li>
                 </ul>
               </div>
-              <div className="w-90">
-                <h1 className="text-2xl text-white border-b-1 border-dashed">
+              <div className="w-90 ">
+                <h1 className="text-2xl text-white border-b-1 border-dashed name1">
                   Contact Information
                 </h1>
                 <div>
@@ -70,12 +70,13 @@ const Footer = () => {
             </div>
             <div className="flex justify-center items-center">
               <div className="w-6/7">
-                <div className="ml-5 flex justify-between items-center">
-                  <img src="asset 71.svg" alt="" className="h-50 w-50" />
-                  <h1 className="text-white text-xl">
+                  <div className="copy-icon">
+                <div className="ml-5 flex justify-between items-center" id="footer-footer-div">
+                  <img src="asset 71.svg" alt="" className="h-50 w-50" id="footer-img" />
+                  <h1 className="text-white text-xl" id="copyright">
                     Copyright © 2025 by Tecoreng
                   </h1>
-                  <div className="flex gap-4">
+                  <div className="flex gap-4" id="footer-icon">
                     <img src="asset 72.svg" alt="" />
                     <img src="asset 73.svg" alt="" />
                     <img src="asset 74.svg" alt="" />
@@ -83,6 +84,7 @@ const Footer = () => {
                     <img src="asset 76.svg" alt="" />
                     <img src="asset 77.svg" alt="" />
                     <img src="asset 78.svg" alt="" />
+                  </div>
                   </div>
                 </div>
               </div>

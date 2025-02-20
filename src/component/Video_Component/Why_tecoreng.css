@@ -1,0 +1,33 @@
+@media (max-width:1024px) {
+    #why-size{
+        width: 170px;
+    }
+    #why-img{
+        width: 45px;
+    }
+    .why-name{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:992px) {
+    #why-size{
+        width: 150px;
+    }
+    #why-img{
+        width: 35px;
+    }
+    .why-name{
+        font-size: 0.6rem;
+    }
+}
+@media (max-width:768px) {
+    #why-size{
+        width: 250px;
+    }
+    #why-img{
+        width: 35px;
+    }
+    .why-name{
+        font-size: 0.6rem;
+    }
+}

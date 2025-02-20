@@ -1,0 +1,37 @@
+@media (max-width: 992px) {
+    h1{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+    #card-div{
+        height: 420px;
+    }
+    #main-div{
+
+    }
+}
+@media (max-width: 425px) {
+    #change-div{
+        display: none;
+    }
+    #vible{
+        display: inline !important;
+    }
+    img{
+        
+    }
+    h1{
+        
+    }
+    p{
+        
+    }
+    #card-div{
+        
+    }
+    #main-div{ 
+
+    }
+}

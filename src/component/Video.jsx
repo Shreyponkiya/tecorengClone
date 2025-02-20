@@ -69,7 +69,7 @@ const Video = () => {
           id="div2"
         >
           <Stories />
-          <div className="relative top-100">
+          <div className="relative top-100" id="other-div">
             <Industries />
             <Appreciation />
             <Form />

@@ -1,0 +1,9 @@
+@media (max-width:768px) {
+    #innovation-div{
+        display: inline-block !important;
+    }
+    #innovation-btn{
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}

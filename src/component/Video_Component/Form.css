@@ -1,5 +1,35 @@
-@media (max-width: 1300px) {
-    #size{
-        
+@media (max-width: 1024px) {
+    #form-size{
+        width: 450px;
+        height: 900px;      
     }
+    .inner-name1{
+      font-size: 2.9rem;
+    }
+    .form-name1{
+        font-size: 1.6rem;
+    }
+    .form-name2{
+      font-size: 2.2rem;
+    }
+    .form-btn-size{
+      padding: 10px 95px;
+    }
+}
+@media (max-width: 870px) {
+  #form-size{
+      width: 600px;
+      height: 800px;      
   }
+  .form-btn-size{
+    padding: 10px 192px;
+  }
+  #main-div{
+    /* display: flex; */
+    justify-content: center;
+
+  }
+  #side-text-div{
+    display: none;
+  }
+}

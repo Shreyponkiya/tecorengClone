@@ -1,0 +1,35 @@
+
+@media (max-width:1024px) {
+    #icon-img1{
+        padding: 1;
+    }
+    #card-name{
+        font-size: 1rem;
+    }
+    #card-name1{
+        font-size: 1.6rem;
+    }
+    #card-pera{
+        font-size: 0.6rem;
+    }
+    #card-pera1{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width:768px) {
+    #icon-img1{
+        padding: 0;
+    }
+    #card-name{
+        font-size: 0.8rem;
+    }
+    #card-name1{
+        font-size: 1.2rem;
+    }
+    #card-pera{
+        font-size: 0.5rem;
+    }
+    #card-pera1{
+        font-size: 0.7rem;
+    }
+}

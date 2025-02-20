@@ -17,7 +17,7 @@ const Appreciation = () => {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 3, slidesToScroll: 1 },
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
       {
         breakpoint: 768,
@@ -63,10 +63,10 @@ const Appreciation = () => {
     <div className="overflow-hidden">
       <h1 className="text-white text-6xl my-8">Appreciation from Clients</h1>
       <div className="py-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto"  id="c-div">
           <Slider {...settings}>
             {clientList.map((item, index) => (
-              <div key={index} className="p-4">
+              <div key={index} className="p-4 flex justify-center">
                 <div className="border-2 h-100 w-100 p-6 rounded-2xl text-black shadow-[inset_0px_13px_49px_4px_#90cdf4]">
                   <h2 className="text-xl text-white font-semibold">{item.name}</h2>
                   <p className="text-sm italic text-white">{item.position}</p>

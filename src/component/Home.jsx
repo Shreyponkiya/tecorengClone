@@ -30,7 +30,7 @@ const Home = () => {
               GET STARTED
             </button>
             <div
-              className="border-2 h-43 mt-15 mb-50 border-cyan-500 rounded-3xl"
+              className="border-2 h-43 mt-15 mb-50 border-cyan-500 rounded-3xl overflow-hidden"
               id="box"
             >
               <div className="flex justify-evenly pt-3">

@@ -1,0 +1,48 @@
+@media (max-width: 950px) {
+    h1{
+        font-size: 2.8rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .name10{
+        left: 90px;
+    }
+    .name2{
+        left: 60px;
+    }
+    .name3{
+        left: 70px;
+    }
+    .name4{
+        left:70px
+    }
+    .name5{
+        left: 60px;
+    }
+    .name6{
+        left: 150px;
+    }
+}
+@media (max-width:768px) {
+    #indu-div{
+        display: inline;
+    }
+    .indu-img{
+        width: 800px;
+    }
+    .indu-img1{
+        width: 900px;
+        height: 500px;
+    }
+    .indu-main-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #indu-img-100{
+        width: 600px;
+        height: 160px;
+        left: 200px;
+    }
+}
