@@ -1,0 +1,13 @@
+@media (max-width: 1024px) {
+    #home-name{
+        font-size:xx-large;
+        padding-left: 0;
+    }
+    #btn-div{
+        top:530px
+    }
+    #box{
+        width: 50em;
+    }
+
+  }

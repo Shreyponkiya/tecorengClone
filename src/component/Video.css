@@ -35,47 +35,50 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 10px;
     border-radius: 20px;
 }
-/* #triangle-bottomright{
-    width: 750px;
-    height: 275px;
-    clip-path: polygon(0px 0px, 0px 100%, 100% 100%, 100% 50%, 0% -1%);
-    background: linear-gradient(93.98deg, rgb(38, 66, 107) 3.93%, rgba(0, 23, 56, 0.42) 97.99%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 10px;
-    border-radius: 20px;
+/* 
+@media (max-width: 1300px) {
+  #main-size{
+      margin-left: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  #div1{
+      width: 100%;
+  }
+  #div2{
+    width: 100%;
+}
+}
+@media (max-width: 1150px) {
+  #main-size{
+    margin-left: 11em;
+  }
+}
+@media (max-width: 1000px) {
+  #main-size{
+    margin-left: 16em;
+  }
+}
+@media (max-width: 960px) {
+  #main-size{
+    margin-left: 20em;
+  }
 } */
-/* transform: scale(-1, 1); */
 
 
-
-  @keyframes moveBall {
-    0% {
-      transform: translate(0, 0);
-    }
-    20% {
-      transform: translate(-50px, 100px);
-    }
-    40% {
-      transform: translate(50px, 200px);
-    }
-    60% {
-      transform: translate(-50px, 300px);
-    }
-    80% {
-      transform: translate(50px, 400px);
-    }
-    100% {
-      transform: translate(0, 500px);
-    }
+@media (max-width: 1024px) {
+  #div1{
+    width: 90%;
   }
-
-  .ball {
-    width: 50px;
-    height: 50px;
-    background: blue;
-    border-radius: 50%;
-    position: fixed;
-    top: 100px;
-    left: 50%;
-    animation: moveBall 5s linear forwards;
+  #div2{
+    width: 90%;
   }
-
+}
+@media (max-width: 992px) {
+  #div1{
+    width: 100%;
+  }
+  #div2{
+    width: 100%;
+  }
+}

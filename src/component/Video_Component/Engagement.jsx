@@ -17,7 +17,7 @@ const Engagement = () => {
   ];
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <h1 className="text-white text-5xl mt-30 font-semibold">
         Our Flexible Engagement Models
       </h1>

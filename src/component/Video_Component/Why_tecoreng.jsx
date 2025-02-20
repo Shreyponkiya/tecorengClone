@@ -16,7 +16,7 @@ const Why_tecoreng = () => {
       style={{ backgroundColor: "#112542" }}
       className="flex justify-center items-center pb-20 mb-20 shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
     >
-      <div className="w-5/6 mt-7 ">
+      <div className="w-5/6 mt-7">
         <div className="justify-between items-center">
           <h1 className="text-7xl text-white mb-5">
             WHY TECORENG FOR YOUE NEXT PROJECT

@@ -22,11 +22,11 @@ const Form = () => {
     });
   };
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="shadow-[rgba(255,255,255,0.76)]">
         <h1 className="text-white text-6xl mt-20">Tecoreng insights</h1>
         <div className="flex justify-between mt-25">
-          <div className="ml-5">
+          <div className="ml-2">
             <h1 className="text-3xl text-white font-semibold">
               We Are Here To Help You
             </h1>
@@ -60,7 +60,7 @@ const Form = () => {
               </div>
             </div>
           </div>
-          <div className="h-210 w-150 bg-white rounded-4xl mb-20 ">
+          <div className="h-210 bg-white rounded-4xl mb-20" id="size">
             <div className="m-10">
               <h1 className="text-6xl font-semibold">
                 Get in{" "}
@@ -68,7 +68,7 @@ const Form = () => {
                   touch
                 </span>{" "}
               </h1>
-              <p>
+              <p className="">
                 We are always ready to help. There are many ways to contact us.
                 You may drop us a line, give us a call, send an email.
               </p>

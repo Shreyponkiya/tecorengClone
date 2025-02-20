@@ -60,7 +60,7 @@ const Appreciation = () => {
   ];
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <h1 className="text-white text-6xl my-8">Appreciation from Clients</h1>
       <div className="py-10">
         <div className="max-w-7xl mx-auto">
