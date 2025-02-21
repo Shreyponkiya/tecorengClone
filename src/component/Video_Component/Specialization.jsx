@@ -42,16 +42,16 @@ const Specialization = () => {
   return (
     <div>
       <h1 className="text-white text-7xl">Our Specialization</h1>
-      <p className="text-white mt-17 mr-65">
+      <p className="text-white mt-17">
         We offer a full range of web app development services that make things
         better for enterprises and companies we work with. Our team of dedicated
         mobile app developers fulfils your diverse business requirements through
         a number of services. We specialize in the following services:
       </p>
-      <div className="flex justify-between">
+      <div className="flex justify-between" id="main-card-main-div">
         {/* Left Card */}
         <div
-          className="border-2 bg-gray-400 border-gray-700 mt-30 rounded-3xl h-65 w-80 items-center justify-center cursor-pointer"
+          className="border-2 bg-gray-400 border-gray-700 mt-30 rounded-3xl h-65 w-80 items-center justify-center cursor-pointer leftcard"
           onClick={handlePrevCard}
         >
           <div className="flex flex-col justify-center items-center">
@@ -88,9 +88,9 @@ const Specialization = () => {
 
         {/* Right Card */}
         <div
-          className="border-2 bg-gray-400 border-gray-700 mt-30 rounded-3xl h-65 w-80 items-center justify-center cursor-pointer"
+          className="border-2 bg-gray-400 border-gray-700 mt-30 rounded-3xl h-65 w-80 items-center justify-center cursor-pointer rightcard"
           onClick={handleNextCard}
-        >
+          >
           <div className="flex flex-col justify-center items-center">
             <img
               src={Special[rightIndex].image}

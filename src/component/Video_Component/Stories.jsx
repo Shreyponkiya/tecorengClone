@@ -51,7 +51,9 @@ const Stories = () => {
               >
                 <img src={item.image} alt="" width={4000} height={500} />
                 <div className="ml-8">
-                  <h1 className="text-white text-2xl my-3 name">{item.title}</h1>
+                  <h1 className="text-white text-2xl my-3 name">
+                    {item.title}
+                  </h1>
                   <p className="text-white text-sm pr-2 pera">{item.dec}</p>
                 </div>
               </div>
@@ -75,8 +77,10 @@ const Stories = () => {
                         className="rounded-3xl"
                       ></video>
                       <div className="ml-8">
-                        <h1 className="text-white text-2xl my-3 name">{i.title}</h1>
-                        <p className="text-white text-sm pr-2 pera" >{i.dec}</p>
+                        <h1 className="text-white text-2xl my-3 name">
+                          {i.title}
+                        </h1>
+                        <p className="text-white text-sm pr-2 pera">{i.dec}</p>
                       </div>
                     </div>
                   ))}
@@ -85,25 +89,33 @@ const Stories = () => {
           </div>
         ))}
       </div>
-      <div className="" style={{ display: "none" }} id="vible">
-        {card.map((item, index) => (
-          <div className=" pl-6 mt-10 h-150 items-center rounded-3xl" key={index}>
+
+      <div id="main-vible-div">
+        <div className="" style={{ display: "none" }} id="vible">
+          {card.map((item, index) => (
             <div
-              id="vible-card-div"
-              className="h-132 rounded-3xl"
-              style={{ backgroundColor: "#112542" }}
+              className=" pl-6 mt-10 h-150 items-center rounded-3xl"
+              onClick={<a href="#"></a>}
+              key={index}
             >
-              <img src={item.image} alt="" width={400} height={500} />
-              <div className="ml-8">
-                <h1 className="text-white text-2xl my-3 name">{item.title}</h1>
-                <p className="text-white text-sm pr-2 pera">{item.dec}</p>
+              <div
+                id="vible-card-div"
+                className="h-132 rounded-3xl"
+                style={{ backgroundColor: "#112542" }}
+              >
+                <img src={item.image} alt="" width={400} height={500} />
+                <div className="ml-8">
+                  <h1 className="text-white text-2xl my-3 name">
+                    {item.title}
+                  </h1>
+                  <p className="text-white text-sm pr-2 pera">{item.dec}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
 };
-
 export default Stories;

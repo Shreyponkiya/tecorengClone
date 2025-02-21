@@ -26,10 +26,7 @@ const Video = () => {
       id="main-size"
     >
       <div className="flex justify-center items-center mb-6">
-        <div
-          className="w-6/7 xl:w-6/7 lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[640px]"
-          id="size-div"
-        >
+        <div className="w-6/7" id="size-div">
           <video
             id="full"
             src="small_video.mp4"
@@ -44,31 +41,29 @@ const Video = () => {
             className="h-25 w-25 flex justify-center italic rounded-full absolute top-145 right-40 z-50 bg-gradient-to-l from-gray-700"
             style={{ backgroundColor: "#01132e" }}
             onClick={handleFull}
+            id="Full_screen"
           >
             <img src="asset 3.svg" alt="react" height={34} width={34} />
           </div>
         </div>
       </div>
-
       <Innovation />
       <Services />
       <Why_tecoreng />
       <div className="flex justify-center items-center">
-        <div
-          className="w-6/7"
-          id="div1"
-        >
+        <div className="w-6/7" id="div1">
           <Specialization />
           <Engagement />
         </div>
       </div>
       <Development />
       <div className="flex justify-center items-center">
-        <div
-          className="w-6/7"
-          id="div2"
-        >
+        <div className="w-6/7 stori" id="div2">
           <Stories />
+        </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <div className="w-6/7" id="div2">
           <div className="relative top-100" id="other-div">
             <Industries />
             <Appreciation />

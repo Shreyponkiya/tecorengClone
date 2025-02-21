@@ -12,12 +12,17 @@
 
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 620px) {
     #change-div{
         display: none;
     }
     #vible{
         display: inline !important;
+    }
+    #main-vible-div{
+        display: flex ;
+        justify-content: center;
+        align-items: center;
     }
     img{
         

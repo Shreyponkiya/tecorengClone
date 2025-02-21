@@ -4,23 +4,18 @@ import "./Home.css";
 const Home = () => {
   return (
     <>
-      <div className="mt-26">
+      <div className="mt-26" id="top-main-main-top-div overflow-hiddn">
         <div>
-          <div className="h-96 flex alien-center justify-center items-center ">
-            <div className="flex items-center mt-95 z-10">
+          <div className="h-96 flex alien-center justify-center items-center" id="main-main-home-main-div">
+            <div className="flex items-center mt-95 mr-220 z-10" id="home-name-div">
               <h1 id="home-name" className="font-sans font-bold text-white relative leading-tight font-900 pl-30 text-7xl text-left mt-20">
-                Web & Mobile <br></br> App <br></br> Development <br></br>{" "}
-                Company
+                Web & Mobile App Development Company
               </h1>
             </div>
             <div
-              className="h-50 w-10/12 right-30 top-30 absolute"
+              className="h-200 w-10/12 right-30 top-30 absolute"
               id="home-img"
             >
-              <img
-                src="asset 79.svg"
-                alt="react"
-              />
             </div>
           </div>
         </div> 

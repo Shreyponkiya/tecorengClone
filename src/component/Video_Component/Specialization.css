@@ -1,4 +1,3 @@
-
 @media (max-width:1024px) {
     #icon-img1{
         padding: 1;
@@ -31,5 +30,20 @@
     }
     #card-pera1{
         font-size: 0.7rem;
+    }
+}
+@media (max-width:650) {
+    #main-card-main-div{
+        position: relative !important;
+    }
+    .leftcard{
+        position: absolute !important;
+        right: 200px;
+    }
+    .middlecard{
+        position: absolute;
+    }
+    .rightcard{
+        position: absolute !important;
     }
 }

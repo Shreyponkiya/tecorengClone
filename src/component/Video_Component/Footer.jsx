@@ -42,7 +42,7 @@ const Footer = () => {
                   <li className="mt-3">Cloud Computing</li>
                 </ul>
               </div>
-              <div className="w-90 ">
+              <div className="w-90" id="footer-ul">
                 <h1 className="text-2xl text-white border-b-1 border-dashed name1">
                   Contact Information
                 </h1>

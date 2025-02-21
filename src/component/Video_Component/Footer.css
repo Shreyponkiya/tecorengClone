@@ -55,3 +55,58 @@
         top: 1000px;
     }
 }
+@media (max-width: 382px) {
+    .invi{
+        display: none;
+    }    
+    #main-div{
+        display: block;
+    }
+    #copyright{
+        font-size: 1rem;
+    }
+    .name1{
+        font-size:1.5rem;
+        /* text-decoration: none; */
+        border: none;
+    }
+    #footer-icon{
+        gap: 0.7rem;
+    }
+    #footer-img{
+        width: 140px;
+    }
+    #loction_list{
+        font-size: 0.6rem;
+        padding-right: 50px;
+    }
+    #footer-ul{
+        width: 300px;
+    }
+}
+@media (max-width: 330px) {
+    .invi{
+        display: none;
+    }    
+    #main-div{
+        display: block;
+    }
+    #copyright{
+        font-size: 1rem;
+    }
+    .name1{
+        font-size:1.5rem;
+        /* text-decoration: none; */
+        border: none;
+    }
+    #footer-icon{
+        gap: 0.7rem;
+    }
+    #footer-img{
+        width: 140px;
+    }
+    #loction_list{
+        font-size: 0.5rem;
+        padding-right: 50px;
+    }
+}

@@ -11,7 +11,35 @@
         justify-content:center;
         align-items: center;
     }
+    #engage-div{
+        width: 400px;
+        height: 400px;
+    }
     #changer-div{
         display: inline !important;
+    }
+    #eng-p-teg{
+        margin-right: 25px;
+    }
+  }
+  @media (max-width: 450px) {
+    #top-main-div{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    #engage-div{
+        width: 300px;
+        height: 300px;
+    }
+    .eng-name{
+        font-size: 1rem;
+    }
+    #changer-div{
+        display: inline !important;
+    }
+    #eng-p-teg{
+        margin-right: 15px;
     }
   }
