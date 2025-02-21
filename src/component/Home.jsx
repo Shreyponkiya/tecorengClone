@@ -21,7 +21,7 @@ const Home = () => {
         </div> 
         <div>
           <div className="absolute left-30 top-189" id="btn-div">
-            <button className="bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 py-3 px-6 text-3xl z-50 md:border-b-4 hover:-translate-y-1 hover:border-b-6  border-amber-700  text-white font-semibold rounded-2xl">
+            <button className="hero-btn bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 py-3 px-6 text-3xl z-50 md:border-b-4 hover:-translate-y-1 hover:border-b-6  border-amber-700  text-white font-semibold rounded-2xl">
               GET STARTED
             </button>
             <div
@@ -30,17 +30,17 @@ const Home = () => {
             >
               <div className="flex justify-evenly pt-3">
                 <div className="text-center">
-                  <h1 className="text-white text-2xl mb-7">
+                  <h1 className="text-white text-2xl mb-7 hero-name">
                     Successful Projects
                   </h1>
                   <h1 className="text-cyan-400 text-7xl font-semibold">100+</h1>
                 </div>
                 <div className="text-center">
-                  <h1 className="text-white text-2xl mb-7">Repeated Client</h1>
+                  <h1 className="text-white text-2xl mb-7 hero-name">Repeated Client</h1>
                   <h1 className="text-cyan-400 text-7xl font-semibold">80%</h1>
                 </div>
                 <div className="text-center">
-                  <h1 className="text-white text-2xl mb-7">
+                  <h1 className="text-white text-2xl mb-7 hero-name">
                     Years in industry
                   </h1>
                   <h1 className="text-cyan-400 text-7xl font-semibold">9+</h1>

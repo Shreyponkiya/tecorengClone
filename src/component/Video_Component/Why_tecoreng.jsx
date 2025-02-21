@@ -21,7 +21,7 @@ const Why_tecoreng = () => {
           <h1 className="text-7xl text-white mb-5">
             WHY TECORENG FOR YOUE NEXT PROJECT
           </h1>
-          <p className="text-white pt-4 mr-50">
+          <p className="text-white pt-4 mr-50" id="intro-pera">
             Introducing Technical Core Engineers (TCE), the intersection of
             technology and innovation. At TCE, we excel in delivering
             exceptional IT services customized to fulfill your development

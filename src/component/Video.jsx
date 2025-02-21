@@ -19,7 +19,6 @@ const Video = () => {
       "Tecoreng_fullVideo.mp4");
     document.getElementById("full").requestFullscreen();
   };
-
   return (
     <div
       className="relative h-96 items-center justify-center top-165 "
@@ -37,6 +36,7 @@ const Video = () => {
             muted
             content="video/mp4"
           ></video>
+
           <div
             className="h-25 w-25 flex justify-center italic rounded-full absolute top-145 right-40 z-50 bg-gradient-to-l from-gray-700"
             style={{ backgroundColor: "#01132e" }}

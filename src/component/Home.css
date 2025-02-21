@@ -2,7 +2,7 @@
     background-image: url("asset 79.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1100px 1100px;
+    background-size: 150vh;
     right: 50px;
 }
 #home-name{
@@ -14,7 +14,7 @@
 
 @media (max-width: 1024px) {
     #home-img{
-        background-size: 900px;
+        background-size: 150vh;
         right: 60px;
         top: 20px;
     }
@@ -47,7 +47,7 @@
     }
     #home-name{
         margin-top: 0px !important;
-        padding-left: 70px;
+        padding-left: 20px;
         font-size: 2.5rem;
         padding-right: 200px;
     }
@@ -63,46 +63,13 @@
         margin-right: 0px;
     }
     #btn-div{
-        top:580px;
+        top:600px;
         margin-left: 0px;
         left: 80px;
     }
     #box{
         width: 78vw;
     }
-}
-@media (max-width: 768px) {
-    /* #home-img{
-        background-size: 700px;
-        right: 60px;
-        top: 60px;
-    } */
-    #home-name{
-        margin-top: 0px !important;
-        padding-left: 70px;
-        font-size: 2.5rem;
-        padding-right: 150px;
-    }
-    /* #main-main-home-main-div{
-        display: inline !important;
-    }
-    #top-main-main-top-div{
-        margin-top: 0px !important;
-    } */
-    /* #home-name-div{
-        margin-top: 120px;
-        margin-left: 80px;
-        margin-right: 0px;
-    } */
-    /* #btn-div{
-        top:580px;
-        margin-left: 0px;
-        left: 80px;
-    }
-    #box{
-        max-width: 630px;
-        margin-right: 20px;
-    } */
 }
 @media (max-width: 768px) {
     #home-img{
@@ -112,8 +79,41 @@
     }
     #home-name{
         margin-top: 0px !important;
-        padding-left: 70px;
+        padding-left: 20px;
         font-size: 2.5rem;
+        padding-right: 150px;
+    }
+    #main-main-home-main-div{
+        display: inline !important;
+    }
+    #top-main-main-top-div{
+        margin-top: 0px !important;
+    }
+    #home-name-div{
+        margin-top: 120px;
+        margin-left: 80px;
+        margin-right: 0px;
+    }
+    #btn-div{
+        top:100px;
+        margin-left: 0px;
+        left: 80px;
+    }
+    #box{
+        max-width: 630px;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #home-img{
+        background-size: 100vh;
+        right: 60px;
+        top: 60px;
+    }
+    #home-name{
+        margin-top: 0px !important;
+        padding-left: 20px;
+        font-size: 2rem;
         padding-right: 200px;
     }
     #main-main-home-main-div{
@@ -128,7 +128,7 @@
         margin-right: 0px;
     }
     #btn-div{
-        top:580px;
+        top:530px;
         margin-left: 0px;
         left: 80px;
     }
@@ -136,53 +136,139 @@
         max-width: 630px;
         margin-right: 20px;
     }
+    .hero-btn{
+        font-size: 1.2rem;
+        padding: 10px 12px;
+    }
+}
+@media (max-width: 630px) {
+    #home-img{
+        background-size: 90vh;
+        right: 25px;
+        top: 0px;
+    }
+    #home-name{
+        margin-top: 0px !important;
+        padding-left: 10px;
+        font-size: 1.7rem;
+        padding-right: 70px;
+    }
+    #main-main-home-main-div{
+        display: inline !important;
+    }
+    #top-main-main-top-div{
+        margin-top: 0px !important;
+    }
+    #home-name-div{
+        margin-top: 120px;
+        margin-left: 80px;
+        margin-right: 0px;
+    }
+    #btn-div{
+        top:480px;
+        margin-left: 0px;
+        left: 60px;
+    }
+    #box{
+        max-width: 630px;
+        margin-right: 20px;
+        margin-top: 43px;
+    }
+    .hero-btn{
+        font-size: 0.5rem;
+        font-style: normal;
+        font-weight: normal;
+        padding: 10px 12px;
+    }
 }
 
-/* @media (max-width: 930px) {
+@media (max-width: 470px) {
+    #home-img{
+        background-size: 70vh;
+        height: 600px;
+        right: 25px;
+        top: 0px;
+    }
     #home-name{
-        font-size:xx-large;
-        padding-left: 0;
+        margin-top: 0px !important;
+        padding-left: 10px;
+        font-size: 1.3rem;
+        padding-right: 60px;
+    }
+    #main-main-home-main-div{
+        display: inline !important;
+    }
+    #top-main-main-top-div{
+        margin-top: 0px !important;
+    }
+    #home-name-div{
+        margin-top: 120px;
+        margin-left: 80px;
+        margin-right: 0px;
     }
     #btn-div{
-        top:530px
+        top:350px;
+        margin-left: 0px;
+        left: 50px;
     }
     #box{
-        width: 40em;
+        max-width: 630px;
+        /* margin-right: 20px; */
+        margin-top: 43px;
+        height: 100px;
+    }
+    .hero-name{
+        font-size: 0.7rem;
+    }
+    .hero-btn{
+        font-size: 0.5rem;
+        font-style: normal;
+        font-weight: normal;
+        padding: 10px 12px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 375px) {
+    #home-img{
+        background-size: 60vh;
+        height: 600px;
+        right: 25px;
+        top: 0px;
+    }
     #home-name{
-        font-size:xx-large;
-        padding-left: 0;
+        margin-top: 0px !important;
+        padding-left: 10px;
+        font-size: 1.1rem;
+        padding-right: 40px;
+    }
+    #main-main-home-main-div{
+        display: inline !important;
+    }
+    #top-main-main-top-div{
+        margin-top: 0px !important;
+    }
+    #home-name-div{
+        margin-top: 120px;
+        margin-left: 80px;
+        margin-right: 0px;
     }
     #btn-div{
-        top:530px
+        top:350px;
+        margin-left: 0px;
+        left: 40px;
     }
     #box{
-        width: 30em;
+        max-width: 630px;
+        /* margin-right: 20px; */
+        margin-top: 43px;
+        height: 100px;
+    }
+    .hero-name{
+        font-size: 0.7rem;
+    }
+    .hero-btn{
+        font-size: 0.5rem;
+        font-style: normal;
+        font-weight: normal;
+        padding: 10px 12px;
     }
 }
-@media (max-width: 620px) {
-    #home-name{
-        font-size:xx-large;
-        padding-left: 0;
-    }
-    #btn-div{
-        top:530px
-    }
-    #box{
-        width: 20em;
-    }
-}
-@media (max-width: 456px) {
-    #home-name{
-        font-size:xx-large;
-        padding-left: 0;
-    }
-    #btn-div{
-        top:530px
-    }
-    #box{
-        width: 10em;
-    }
-} */
