@@ -3,6 +3,19 @@
 }
 .responsive_nav{
     font-size: smaller;
+    display: inline !important;
+    position: fixed;
+    width: 100%; 
+    height: 100vh;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    color: white;
+}
+.toggle-nev-bar{
+    display: none;
+    background-color: rgb(0, 23, 56);
+    
 }   
 @media (max-width: 1024px) {
     #main-nav-bar{
@@ -15,7 +28,6 @@
         margin: 0;
     }
     #nav-bar{
-        /* visibility:hidden; */
         display: none;
     }
     #text-bar{
@@ -23,18 +35,13 @@
     }
     #icon-bar{
         display: inline !important;
-        margin-left: 700px;
     }
 }
+
 @media (max-width: 992px) {
-    #nav-bar{
-        /* visibility:hidden; */
-        display: none;
-    }
     #icon-bar{
-        /* visibility:visible !important; */
-        /* display: inline !important; */
-        margin-left: 800px;
+        display: inline !important;
+        /* margin-left: 800px; */
     }
 }
 @media (max-width: 768px) {
@@ -48,23 +55,41 @@
         margin: 0;
     }
     #nav-bar{
-        /* visibility:hidden; */
         display: none;
     }
     #text-bar{
         display: none;
     }
     #icon-bar{
-        /* visibility:visible !important; */
-        margin-left: 700px;
+        margin-right: 50px;
+    }
+    .nav-bar-life{
+        margin-right: 350vh;
     }
 }
-@media (max-width: 375px) {
+/* @media (max-width: 672px) {
     #main-nav-bar{
-        max-width: 375px;
+        max-width: 768px;
+    }
+    nav{
+        padding-left: 0;
+        padding-right: 0;
+        padding: 0;
+        margin: 0;
     }
     #nav-bar{
-        visibility:hidden;
+        display: none;
+    }
+    #text-bar{
+        display: none;
+    }
+    .nav-bar-icon-div{
+        margin-right: 100px;
+    }
+} */
+/* @media (max-width: 700px) {
+    #main-nav-bar{
+        max-width: 375px;
     }
     nav{
         padding-left: 0;
@@ -75,7 +100,7 @@
     #text-bar{
         display: none;
     }
-    #icon-bar{
-        visibility:visible !important;
+    .nav-bar-life{
+        margin-right: 350vh;
     }
-}
+} */
