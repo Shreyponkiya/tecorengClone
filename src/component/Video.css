@@ -16,7 +16,6 @@
     transform: scale(1);
     transition: 0.9s all;
 }
-    
 .triangle-bottomleft{
     width: 750px;
     height: 275px;
@@ -36,8 +35,74 @@
     border-radius: 20px;
 }
 
+#Full_screen {
+  position: absolute;
+  bottom: 10px; /* Keeps button at bottom */
+  right: 70px;  /* Moves button to right */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #01132e;
+  border-radius: 50%;
+  z-index: 50;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-@media (max-width: 1500px) {
+/* Ensure button stays inside the video */
+#size-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  #Full_screen {
+    top: 75%;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width:992px) {
+  #main-size{
+    top: 700px;
+  }
+}
+@media (max-width:470px) {
+  #main-size{
+    top: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  #Full_screen {
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  #Full_screen {
+    right: 25px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  #other-div {
+    top: 0px;
+  }
+}
+
+
+/* @media (max-width: 1500px) {
   #Full_screen{
       margin-left: 20px;
   }
@@ -102,14 +167,14 @@
     }
   }
   @media (max-width: 480px) {
-    /* #Full_screen{
+    #Full_screen{
       top: 500px;
-    } */
+    }
     #main-size{
       top: 600px;
     }
-  }
-  @media (max-width: 620px) {
+  } */
+  /* @media (max-width: 620px) {
       .stori{
         width: 420px !important;
       }
@@ -141,7 +206,4 @@
   #other-div{
     top:1000px
   }
-  #main-size{
-    top: 500px;
-  }
-} 
+}  */

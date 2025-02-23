@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../App.css";
 import "./Navbar.css";
-
 const Navbar = () => {
   const navRef = useRef();
   const navRef1 = useRef();
+  const navabout = useRef();
+
   const [showNavbar, setShowNavbar] = useState(true);
   let lastScrollY = window.scrollY;
 
@@ -12,6 +13,14 @@ const Navbar = () => {
     console.log("Hello world");
     navRef.current.classList.toggle("responsive_nav");
     navRef1.current.classList.toggle("toggle-nev-bar");
+  };
+
+  const handleMouseEnter = () => {
+    console.log("Hello World");
+    navabout.current.classList.toggle("toggle-nav-aboutin");
+  };
+  const handleMouseLeave = () => {
+    navabout.current.classList.toggle("toggle-nav-aboutin");
   };
   useEffect(() => {
     const handleScroll = () => {
@@ -34,47 +43,73 @@ const Navbar = () => {
     <>
       <div
         id="main-nav-bar"
-        className={`z-50 fixed top-0 transition-transform duration-[1500ms] ease-in-out w-full ${
+        className={`z-50 fixed top-0 transition-transform duration-[1500ms] ease-in-out ${
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <nav
-          className="h-26 border-1 border-gray-700 flex  items-center bg-[#01132e] text-white pl-8 pr-8"
+          className="h-26 border-1 border-gray-700 flex items-center bg-[#01132e] text-white pl-8 pr-300"
           ref={navRef1}
         >
-          <div className="flex justify-between items-center nav-bar-life">
-            <div>
-              <img src="asset 71.svg" alt="react" />
+          <div className="">
+            <div className="flex items-center nav-bar-life">
+              <div>
+                <img src="asset 71.svg" alt="react" />
+              </div>
+              <ul
+                className="flex justify-end items-center gap-10 font-sans font-semibold"
+                id="box"
+              >
+                <li id="text-bar">Services</li>
+                <div
+                  onMouseEnter={() => handleMouseEnter()}
+                  onMouseLeave={() => handleMouseLeave()}
+                >
+                  <li id="text-bar">About Us</li>
+                </div>
+                <li id="text-bar">Career</li>
+                <li id="text-bar">Portfolio</li>
+                <li id="text-bar">Blog</li>
+                <li id="text-bar">
+                  <button className="border-1 py-2.5 px-6 duration-1000 ease-in-out rounded-3xl hover:bg-orange-500 hover:bg-gradient-to-r hover:from-orange-300 hover:to-orange-600">
+                    Hire Developers
+                  </button>
+                </li>
+                <li id="text-bar">
+                  <button className="py-2.5 px-6 rounded-3xl duration-1000 ease-in-out bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 hover:bg-gradient-to-l">
+                    Get a quote
+                  </button>
+                </li>
+              </ul>
+              <div className="nav-bar-icon-div">
+                <img
+                  src="asset 2.svg"
+                  id="icon-bar"
+                  style={{ display: "none" }}
+                  onClick={Navbar_Button}
+                  alt=""
+                />
+              </div>
+              {/* <div className="flex gap-4.5 mr-200" id="text-bar">
+                
+                
+              </div> */}
             </div>
-            <ul
-              className="flex justify-between items-center gap-20 font-sans mr-8 font-semibold"
-              id="box"
-            >
-              <li id="text-bar">Services</li>
-              <li id="text-bar">About Us</li>
-              <li id="text-bar">Career</li>
-              <li id="text-bar">Portfolio</li>
-              <li id="text-bar">Blog</li>
-            </ul>
-            <div className="nav-bar-icon-div">
-              <img
-                src="asset 2.svg"
-                id="icon-bar"
-                style={{ display: "none" }}
-                onClick={Navbar_Button}
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="flex gap-4.5" id="text-bar">
-            <button className="border-1 py-2.5 px-6 duration-1000 ease-in-out rounded-3xl hover:bg-orange-500 hover:bg-gradient-to-r hover:from-orange-300 hover:to-orange-600">
-              Hire Developers
-            </button>
-            <button className="py-2.5 px-6 rounded-3xl duration-1000 ease-in-out bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 hover:bg-gradient-to-l">
-              Get a quote
-            </button>
           </div>
         </nav>
+        <div
+          ref={navabout}
+          className=" z-100"
+          id="add-border"
+          style={{ display: "none" }}
+        >
+          <div className="border-2 border-white h-30 w-80 rounded-2xl bg-blue-950">
+            <h1 className="py-3 px-3 text-lg text-white ">Who we are</h1>
+            <h1 className="py-3 px-3 text-lg text-white ">
+              Industries we serve
+            </h1>
+          </div>
+        </div>
       </div>
       <div ref={navRef} className="toggle-nev-bar">
         <div className="flex justify-end m-10">

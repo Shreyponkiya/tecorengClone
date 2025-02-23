@@ -1,209 +1,126 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react';
+import "./Development.css";
 
-const Development = () => {
+const DevelopmentProcess = () => {
+  const [isBallVisible, setIsBallVisible] = useState(false);
+  const [ballStyle, setBallStyle] = useState({
+    transform: 'translate3d(30px, 70px, 0px) rotate(0deg)',
+    animation: 'fall 4s ease-out 1, roll 10s linear infinite, bounce 2s ease-in-out infinite',
+  });
+
+  const containerRef = useRef(null);
+
+  const steps = [
+    { title: "Research and Analysis", description: "Idea, Consultation, Research, Goal Definition, & Requirements Gathering", imageSrc: "asset 40.webp", position: "left" },
+    { title: "Design", description: "System Architecture Design, Wireframing, UI/UX Designing, & Prototyping", imageSrc: "asset 41.webp", position: "right" },
+    { title: "Development", description: "Functional Implementation, Software Coding & Optimization", imageSrc: "asset 42.webp", position: "left" },
+    { title: "Testing", description: "Quality Assurance, Troubleshooting, & Testing", imageSrc: "asset 43.webp", position: "right" },
+    { title: "Deployment", description: "Launch, Beta Live, & Live", imageSrc: "asset 44.webp", position: "left" },
+    { title: "Evaluation", description: "Performance Evaluation, & Analytics Implementation", imageSrc: "asset 45.webp", position: "right" },
+    { title: "Maintenance", description: "Monitoring, Feedback, Analysis, & Complete Support", imageSrc: "asset 46.webp", position: "left" },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const ball = document.querySelector('.rolling-ball');
+      if (ball) {
+        const ballPosition = ball.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        setIsBallVisible(ballPosition <= windowHeight);
+      }
+
+      if (!containerRef.current) return;
+
+      const container = containerRef.current;
+      const containerRect = container.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      let progress = (viewportHeight - containerRect.top) / (containerRect.height + viewportHeight);
+      progress = Math.max(0, Math.min(1, progress));
+
+      const path = [
+        { x: 30, y: 70 },      
+        { x: 1100, y: 400 },     
+        { x: -10, y: 700 },      
+        { x: 1100, y: 900 },     
+        { x: -10, y: 1280 },     
+        { x: 1100, y: 1550 },    
+        { x: 50, y: 1800 },     
+        { x: 850, y: 2000 },    
+        { x: 890, y: 2130 }
+      ];
+
+      const totalSegments = path.length - 1;
+      const currentSegment = Math.floor(progress * totalSegments);
+      const segmentProgress = (progress * totalSegments) % 1;
+
+      if (currentSegment < 0 || currentSegment >= totalSegments) return;
+
+      const start = path[currentSegment];
+      const end = path[currentSegment + 1];
+
+      const x = start.x + (end.x - start.x) * segmentProgress;
+      const y = start.y + (end.y - start.y) * segmentProgress;
+
+      // Rotate effect
+      const rotation = 2.37289 + (progress * 360);
+
+      // Update ball position
+      setBallStyle({
+        transform: `translate3d(${x}px, ${y}px, 0px) rotate(${rotation}deg)`,
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initialize on mount
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div
-          style={{ backgroundColor: "#112542", position: "relative" }}
-          className="pb-20 mb-20 z-20"
-        >
-          <div className="flex flex-col justify-center  w-5/6 mx-auto">
-            <h1 className="text-6xl text-white leading-tight mt-8">
-              Our Development Process
-            </h1>
-            <div className="mt-10 relative">
-              <img
-                src="asset 38.svg"
-                className="relative"
-                height={25}
-                width={55}
-                alt=""
-              />
-              <img
-                src="asset 39.svg"
-                className="absolute top-6"
-                height={20}
-                width={60}
-                alt=""
-              />
-            </div>
+    <div className="development-container" ref={containerRef}>
+      <h1 className="development-heading text-6xl">Our Development Process</h1>
 
-            <div className="relative w-full h-500 mt-10 overflow-hidden">
-              {/* Left side div */}
-              <div className="absolute top-0 left-0">
-                <div class="triangle-bottomleft flex justify-baseline items-center">
-                  <div
-                    className="h-35 w-35 flex justify-center border-t-1 shadow-[0px_35px_40px_rgba(0,0,0,0.50)] border-white ml-10 italic rounded-full z-50 bg-gradient-to-b from-cyan-950"
-                    style={{ backgroundColor: "#01132e" }}
-                  >
-                    <img src="asset 40.webp" alt="" height={10} width={120} />
-                  </div>
-                  <div className="ml-5 mt-10">
-                    <h1 className="text-white text-2xl">
-                      Research and Analysis
-                    </h1>
-                    <p className="text-white mt-5 mr-2">
-                      {" "}
-                      Idea, Consultation, Research, Goal Definition, &
-                      Requirements Gathering
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <div className="ball-container">
+        <img src="asset 38.svg" alt="Ball Entry" className="ball-entry" />
+        <img src="asset 39.svg" alt="Ball" className={`rolling-ball ${isBallVisible ? 'visible' : ''}`} style={ballStyle} />
+      </div>
 
-              {/* Right side div */}
-              <div className="absolute bottom-0 right-0 top-70">
-                <div
-                  class="triangle-bottomleft"
-                  style={{ transform: "scale(-1, 1)" }}
-                >
-                  <div class="triangle-bottomleft flex justify-baseline items-center">
-                    <div
-                      className="h-35 w-35 flex justify-center border-t-1 shadow-[0px_35px_40px_rgba(0,0,0,0.50)] border-white ml-10 italic rounded-full z-50 bg-gradient-to-b from-cyan-950"
-                      style={{ backgroundColor: "#01132e" }}
-                    >
-                      <img src="asset 40.webp" alt="" height={10} width={120} />
-                    </div>
-                    <div className="ml-5 mt-10">
-                      <h1 className="text-white text-2xl">
-                        Research and Analysis
-                      </h1>
-                      <p className="text-white mt-5 mr-2">
-                        {" "}
-                        Idea, Consultation, Research, Goal Definition, &
-                        Requirements Gathering
-                      </p>
-                    </div>
-                  </div>
+      {steps.map((step, index) => (
+        <div key={index} className={`development-step ${step.position}`}>
+          <div className="development-box">
+            {step.position === 'left' ? (
+              <>
+                <div className="image-container">
+                  <img src={step.imageSrc} alt={step.title} className="step-image" />
                 </div>
-              </div>
-
-              <div className="absolute top-140 left-0">
-                <div class="triangle-bottomleft">
-                  <div class="triangle-bottomleft flex justify-baseline items-center">
-                    <div
-                      className="h-35 w-35 flex justify-center border-t-1 shadow-[0px_35px_40px_rgba(0,0,0,0.50)] border-white ml-10 italic rounded-full z-50 bg-gradient-to-b from-cyan-950"
-                      style={{ backgroundColor: "#01132e" }}
-                    >
-                      <img src="asset 40.webp" alt="" height={10} width={120} />
-                    </div>
-                    <div className="ml-5 mt-10">
-                      <h1 className="text-white text-2xl">
-                        Research and Analysis
-                      </h1>
-                      <p className="text-white mt-5 mr-2">
-                        {" "}
-                        Idea, Consultation, Research, Goal Definition, &
-                        Requirements Gathering
-                      </p>
-                    </div>
-                  </div>
+                <div className="text-container">
+                  <h2>{step.title}</h2>
+                  <p>{step.description}</p>
                 </div>
-              </div>
-
-              <div className="absolute bottom-0 right-0 top-210">
-                <div
-                  class="triangle-bottomleft"
-                  style={{ transform: "scale(-1, 1)" }}
-                >
-                  <div
-                    class="triangle-bottomleft flex justify-baseline items-center"
-                    style={{ transform: "scale(-1, 1) " }}
-                  >
-                    <div
-                      className="h-35 w-35 flex justify-center border-t-1 shadow-[0px_35px_40px_rgba(0,0,0,0.50)] border-white ml-10 italic rounded-full z-50 bg-gradient-to-b from-cyan-950"
-                      style={{ backgroundColor: "#01132e" }}
-                    >
-                      <img src="asset 40.webp" alt="" height={10} width={120} />
-                    </div>
-                    <div className="ml-5 mt-10">
-                      <h1 className="text-white text-2xl">
-                        Research and Analysis
-                      </h1>
-                      <p className="text-white mt-5 mr-2">
-                        {" "}
-                        Idea, Consultation, Research, Goal Definition, &
-                        Requirements Gathering
-                      </p>
-                    </div>
-                  </div>
+              </>
+            ) : (
+              <>
+                <div className="text-container">
+                  <h2>{step.title}</h2>
+                  <p>{step.description}</p>
                 </div>
-              </div>
-
-              <div className="absolute top-280 left-0">
-                <div class="triangle-bottomleft">
-                  <div class="triangle-bottomleft flex justify-baseline items-center">
-                    <div
-                      className="h-35 w-35 flex justify-center border-t-1 shadow-[0px_35px_40px_rgba(0,0,0,0.50)] border-white ml-10 italic rounded-full z-50 bg-gradient-to-b from-cyan-950"
-                      style={{ backgroundColor: "#01132e" }}
-                    >
-                      <img src="asset 40.webp" alt="" height={10} width={120} />
-                    </div>
-                    <div className="ml-5 mt-10">
-                      <h1 className="text-white text-2xl">
-                        Research and Analysis
-                      </h1>
-                      <p className="text-white mt-5 mr-2">
-                        {" "}
-                        Idea, Consultation, Research, Goal Definition, &
-                        Requirements Gathering
-                      </p>
-                    </div>
-                  </div>
+                <div className="image-container">
+                  <img src={step.imageSrc} alt={step.title} className="step-image" />
                 </div>
-              </div>
-
-              <div className="absolute bottom-0 right-0 top-350">
-                <div
-                  class="triangle-bottomleft"
-                  style={{ transform: "scale(-1, 1)" }}
-                >
-                  <div class="triangle-bottomleft flex justify-baseline items-center">
-                    <div
-                      className="h-35 w-35 flex justify-center border-t-1 shadow-[0px_35px_40px_rgba(0,0,0,0.50)] border-white ml-10 italic rounded-full z-50 bg-gradient-to-b from-cyan-950"
-                      style={{ backgroundColor: "#01132e" }}
-                    >
-                      <img src="asset 40.webp" alt="" height={10} width={120} />
-                    </div>
-                    <div className="ml-5 mt-10">
-                      <h1 className="text-white text-2xl">
-                        Research and Analysis
-                      </h1>
-                      <p className="text-white mt-5 mr-2">
-                        {" "}
-                        Idea, Consultation, Research, Goal Definition, &
-                        Requirements Gathering
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute top-420 left-0">
-                <div class="triangle-bottomleft">
-                  <div class="triangle-bottomleft flex justify-baseline items-center">
-                    <div
-                      className="h-35 w-35 flex justify-center border-t-1 shadow-[0px_35px_40px_rgba(0,0,0,0.50)] border-white ml-10 italic rounded-full z-50 bg-gradient-to-b from-cyan-950"
-                      style={{ backgroundColor: "#01132e" }}
-                    >
-                      <img src="asset 40.webp" alt="" height={10} width={120} />
-                    </div>
-                    <div className="ml-5 mt-10">
-                      <h1 className="text-white text-2xl">
-                        Research and Analysis
-                      </h1>
-                      <p className="text-white mt-5 mr-2">
-                        {" "}
-                        Idea, Consultation, Research, Goal Definition, &
-                        Requirements Gathering
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </>
+            )}
           </div>
         </div>
-  )
-}
+      ))}
 
-export default Development
+      <div className="ballexit-container ml-[50rem] mt-[-10rem]">
+        <img src="asset 47.webp" alt="Ball Exit" className="ballexit-image" />
+      </div>
+    </div>
+  );
+};
+
+export default DevelopmentProcess;

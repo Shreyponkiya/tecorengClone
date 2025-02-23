@@ -1,17 +1,7 @@
-site key :6LdV59oqAAAAAHokiQcnHDR0nlsBDicy2GUHnov6
-secret key :6LdV59oqAAAAAD0oss3LKs-0g69TLUKND3zJ4iL-
-
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import img from '../assets/ane.png';
-import img1 from '../assets/ane.png';
-import img2 from '../assets/ane.png';
-import img3 from '../assets/ane.png';
-import img4 from '../assets/ane.png';
-
 const Tecoreng = () => {
   const cardData = [
     {
@@ -19,35 +9,35 @@ const Tecoreng = () => {
       title: "Top IOS App Development Tools for Efficient Mobile App Creation",
       date: "03-11-2023 - Tecoreng",
       description: "As technology continues to evolve at a rapid pace, the demand for mobile applications has skyrocketed. Mobile apps are now an integral part of our daily lives, providing us with convenient access to information, entertainment, and services...",
-      image: img,
+      image: "asset 50.webp",
     },
     {
       id: 2,
       title: "What Is IaaS? Infrastructure as a Service",
       date: "02-03-2023 - Paresh Solanki",
       description: "What Is IaaS? IaaS stands for Infrastructure as a Service. That is a part of cloud computing services. It offers the necessary computers, storage, and networking resources on demand according to a pay-as-you-go system...",
-      image: img1,
+      image: "asset 50.webp",
     },
     {
       id: 3,
       title: "Mobile App Development Process: From Idea to Launch",
       date: "09-06-2023 - Paresh Solanki",
       description: "Mobile app development has become an integral part of the digital landscape, transforming the way we interact with technology and enhancing our daily lives. From social networking and entertainment to productivity and e-commerce...",
-      image: img2,
+      image: "asset 50.webp",
     },
     {
       id: 4,
       title: "Artificial Intelligence: How AI is Transforming Every Industry",
       date: "20-07-2023 - Paresh Solanki",
       description: "Artificial intelligence (AI) refers to the emulation of human intellect in devices that have been designed to behave and think like humans. The phrase may also be used to refer to any computer that demonstrates characteristics of the human intellect...",
-      image: img3,
+      image: "asset 50.webp",
     },
     {
       id: 5,
       title: "Artificial Intelligence: How AI is Transforming Every Industry",
       date: "20-07-2023 - Paresh Solanki",
       description: "Artificial intelligence (AI) refers to the emulation of human intellect in devices that have been designed to behave and think like humans. The phrase may also be used to refer to any computer that demonstrates characteristics of the human intellect...",
-      image: img4,
+      image: "asset 50.webp",
     }
   ];
 

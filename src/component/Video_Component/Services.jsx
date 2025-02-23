@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Services = () => {
-  const [isHovered, setIsHovered] = React.useState(false);
-  const [hoveredItem, setHoveredItem] = React.useState("");
+  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState("");
+  const [isHoverEnabled, setIsHoverEnabled] = useState(true);
+
+  useEffect(() => {
+    const updateHoverState = () => {
+      setIsHoverEnabled(window.innerWidth >= 768);
+    };
+
+    updateHoverState();
+    window.addEventListener("resize", updateHoverState);
+
+    return () => {
+      window.removeEventListener("resize", updateHoverState);
+    };
+  }, []);
+
   const functionality1 = [
     { image: "asset 4.webp", data: "Web Development" },
     { image: "asset 9.webp", data: "Mobile App Development" },
@@ -11,6 +26,7 @@ const Services = () => {
     { image: "asset 24.webp", data: "Quality Assurance (QA)" },
     { image: "asset 29.webp", data: "Digital Marketing" },
   ];
+
   const onHoverFunctionality1 = [
     {
       original_image: "asset 4.webp",
@@ -20,7 +36,7 @@ const Services = () => {
       images: [
         { img: "asset 5.svg", img_name: "React JS" },
         { img: "asset 6.svg", img_name: "Angular" },
-        { img: "asset 7.svg", img_name: "laravel" },
+        { img: "asset 7.svg", img_name: "Laravel" },
         { img: "asset 8.svg", img_name: "Node JS" },
       ],
     },
@@ -85,6 +101,7 @@ const Services = () => {
       ],
     },
   ];
+
   return (
     <div className="flex justify-center items-center mb-15">
       <div className="w-6/7">
@@ -98,24 +115,28 @@ const Services = () => {
             <div
               key={index}
               onMouseEnter={() => {
-                setIsHovered(true);
-                setHoveredItem(item.data);
+                if (isHoverEnabled) {
+                  setIsHovered(true);
+                  setHoveredItem(item.data);
+                }
               }}
               onMouseLeave={() => {
-                setIsHovered(false);
-                setHoveredItem("");
+                if (isHoverEnabled) {
+                  setIsHovered(false);
+                  setHoveredItem("");
+                }
               }}
               className="flex pl-6 border-1 border-gray-600 mt-10 h-30 items-center rounded-3xl hover:bg-gradient-to-r hover:from-sky-900 web"
             >
               <img src={item.image} alt="" />
 
-              {isHovered && hoveredItem === item.data ? (
+              {isHovered && hoveredItem === item.data && isHoverEnabled ? (
                 <></>
               ) : (
                 <h1 className="text-white pl-13 text-2xl">{item.data}</h1>
               )}
 
-              {isHovered && hoveredItem === item.data && (
+              {isHovered && hoveredItem === item.data && isHoverEnabled && (
                 <div className="p-4 rounded-xl mt-2 z-10 justify-between">
                   {onHoverFunctionality1
                     .filter((i) => i.title === item.data)
@@ -132,14 +153,11 @@ const Services = () => {
                           </div>
                           <div className="flex gap-15 pr-15 justify-end">
                             {i.images.map((img, index) => (
-                              <div className="flex flex-col items-center justify-center">
-                                <img
-                                  key={index}
-                                  src={img.img}
-                                  alt=""
-                                  height={65}
-                                  width={65}
-                                />
+                              <div
+                                className="flex flex-col items-center justify-center"
+                                key={index}
+                              >
+                                <img src={img.img} alt="" height={65} width={65} />
                                 <h1 className="text-white pt-3">
                                   {img.img_name}
                                 </h1>

@@ -1,6 +1,35 @@
 .text-bar{
     visibility: inherit;
 }
+
+#main-nav-bar{
+    width: 100%;
+}
+#text-bar:hover{
+    color: rgb(255, 188, 62);
+    border-bottom: 1px solid black;
+}
+#text-bar {
+    position: relative;
+    padding-bottom: 5px;
+}
+  #text-bar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  #text-bar:hover::after {
+    width: 100%;
+    background-color: rgb(255, 188, 62); /* Change to desired hover color */
+  }
+  
 .responsive_nav{
     font-size: smaller;
     display: inline !important;
@@ -14,9 +43,15 @@
 }
 .toggle-nev-bar{
     display: none;
-    background-color: rgb(0, 23, 56);
-    
+    background-color: rgb(0, 23, 56);   
 }   
+.toggle-nav-aboutin{
+    display: inline !important;
+    position: relative;
+    left: 50%;
+    background-color:rgb(255, 255, 255) !important;
+}
+
 @media (max-width: 1024px) {
     #main-nav-bar{
         min-width: 1024px;

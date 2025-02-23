@@ -1,3 +1,35 @@
+@media (max-width: 650px) {
+    #main-card-main-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 400px; /* Enough space for cards */
+    }
+
+    .leftcard, .rightcard {
+        position: absolute;
+        top: 25%;
+        transform: translateY(-50%) scale(0.9); /* Shrink slightly */
+        z-index: 1; /* Behind the middle card */
+        transition: all 0.3s ease-in-out;
+        opacity: 1; /* Ensure visibility */
+    }
+
+    .leftcard {
+        left: -40px; /* Move it slightly to the left */
+    }
+
+    .rightcard {
+        right: -40px; /* Move it slightly to the right */
+    }
+
+    .middleCard {
+        position: relative;
+        z-index: 2; /* Keep middle card on top */
+        transform: scale(0.8); /* Normal size */
+    }
+}
 @media (max-width:1024px) {
     #icon-img1{
         padding: 1;

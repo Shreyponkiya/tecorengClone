@@ -1,10 +1,27 @@
 import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import "./Form.css"
+import { useFormik } from "formik";
+import { Yup_schema } from "../../schema/Yup_schema";
+import "./Form.css";
 const Form = () => {
   function onChange(value) {
     console.log("Captcha value:", value);
   }
+  const initialValues = {
+    FullName: "",
+    email: "",
+    Contact: "",
+    talk: "",
+  };
+  const { values, errors, touched, handleSubmit, handleBlur, handleChange } =
+    useFormik({
+      initialValues,
+      validationSchema: Yup_schema,
+      onSubmit: (values) => {
+        console.log("Form Submitted:", values);
+      },
+    });
+
   const handleFile = () => {
     const fileInput = document.createElement("input");
     fileInput.type = "file";
@@ -25,7 +42,11 @@ const Form = () => {
     <div className="overflow-hidden">
       <div className="shadow-[rgba(255,255,255,0.76)]">
         <h1 className="text-white text-6xl mt-20">Tecoreng insights</h1>
-        <div className="flex justify-between mt-25" id="main-div" style={{display:"flex"}}>
+        <div
+          className="flex justify-between mt-25"
+          id="main-div"
+          style={{ display: "flex" }}
+        >
           <div className="ml-2" id="side-text-div">
             <h1 className="text-3xl text-white font-semibold form-name1">
               We Are Here To Help You
@@ -73,13 +94,20 @@ const Form = () => {
                 You may drop us a line, give us a call, send an email.
               </p>
               <div className="mt-7 ml-3">
-                <form action="">
+                <form action="/" onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <input
                       type="text"
                       placeholder="Full Name"
-                      className="mb-1.5 p-1.5 border-white"
+                      className="mb-1.5 p-1.5 pr-50 border-white"
+                      name="FullName"
+                      value={values.FullName}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    {errors.FullName && touched.FullName && (
+                      <p className="text-red-600 text-sm">{errors.FullName}</p>
+                    )}
                     <hr />
                   </div>
                   <div>
@@ -93,15 +121,29 @@ const Form = () => {
                       type="text"
                       placeholder="Contact number"
                       className="mb-1.5 p-1.5"
+                      name="Contact"
+                      value={values.Contact}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    {errors.Contact && touched.Contact && (
+                      <p className="text-red-600 text-sm">{errors.Contact}</p>
+                    )}
                     <hr />
                   </div>
                   <div className="mb-3">
                     <input
                       type="text"
                       placeholder="E-mail"
+                      name="email"
                       className="mb-1.5 p-1.5 border-white"
+                      value={values.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    {errors.email && touched.email && (
+                      <p className="text-red-600 text-sm">{errors.email}</p>
+                    )}
                     <hr />
                   </div>
                   <div className="mb-3">
@@ -109,7 +151,14 @@ const Form = () => {
                       type="text"
                       placeholder="Let's talk about your idea"
                       className="mb-1.5 p-1.5 border-white"
+                      name="talk"
+                      value={values.talk}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    {errors.talk && touched.talk && (
+                      <p className="text-red-600 text-sm">{errors.talk}</p>
+                    )}
                     <hr />
                   </div>
                   <div className="mt-10" onClick={handleFile}>
@@ -135,7 +184,10 @@ const Form = () => {
                     />
                   </div>
                   <div className="mt-8 mb-12">
-                    <button className="form-btn-size rounded-2xl px-50 py-3 text-white text-3xl font-semibold bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 duration-400">
+                    <button
+                      type="submit"
+                      className="form-btn-size rounded-2xl px-50 py-3 text-white text-3xl font-semibold bg-orange-500 bg-gradient-to-r from-orange-300 to-orange-600 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 duration-400"
+                    >
                       SUBMIT
                     </button>
                   </div>

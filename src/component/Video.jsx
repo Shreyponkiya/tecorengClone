@@ -10,6 +10,7 @@ import Why_tecoreng from "./Video_Component/Why_tecoreng";
 import Services from "./Video_Component/Services";
 import Innovation from "./Video_Component/Innovation";
 import Development from "./Video_Component/Development";
+import Insights from "./Video_Component/Insights"
 import "../App.css";
 import "./Video.css";
 
@@ -36,7 +37,7 @@ const Video = () => {
             muted
             content="video/mp4"
           ></video>
-
+            {/* full screen div*/}
           <div
             className="h-25 w-25 flex justify-center italic rounded-full absolute top-145 right-40 z-50 bg-gradient-to-l from-gray-700"
             style={{ backgroundColor: "#01132e" }}
@@ -67,6 +68,7 @@ const Video = () => {
           <div className="relative top-100" id="other-div">
             <Industries />
             <Appreciation />
+            <Insights/>
             <Form />
           </div>
         </div>
