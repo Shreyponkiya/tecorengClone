@@ -1,5 +1,5 @@
 import React from "react";
-import "./Innovation.css"
+import "./Innovation.css";
 const Innovation = () => {
   return (
     <div
@@ -22,17 +22,24 @@ const Innovation = () => {
               development processes, and we will fuel your concepts to manifest
               as groundbreaking disruptions.
             </p>
-            <button id="innovation-btn" className="bg-orange-500 bg-gradient-to-r duration-500 from-orange-300 to-orange-600 py-3 px-6 text-3xl z-50 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 text-white font-semibold rounded-2xl">
+            <button
+              id="innovation-btn"
+              className="bg-orange-500 bg-gradient-to-r duration-500 from-orange-300 to-orange-600 py-3 px-6 text-3xl z-50 md:border-b-4 hover:-translate-y-1 hover:border-b-6 border-amber-700 text-white font-semibold rounded-2xl"
+            >
               HIRE NOW
             </button>
           </div>
 
-          <div className="ml-10">
+          <div className="relative ml-10 w-1100">
             <img
               src="infinite.c057ea68.webp"
-              height={3200}
-              width={3200}
-              alt=""
+              alt="Digital Innovation"
+              className="w-full h-full object-contain"
+            />
+            <img
+              src="infinite_ball.webp"
+              alt="Floating Ball"
+              className="w-2 sm:w-16 sm:h-16 floating-ball"
             />
           </div>
         </div>

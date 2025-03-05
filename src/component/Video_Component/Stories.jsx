@@ -24,7 +24,7 @@ const Stories = () => {
     },
   ];
   return (
-    <div className="mb-20">
+    <div className="mb-20 mt-20">
       <h1 className="text-white text-6xl name">Our Success Stories</h1>
       <div className="flex" id="change-div">
         {card.map((item, index) => (
@@ -73,8 +73,9 @@ const Stories = () => {
                         loop
                         autoPlay
                         width={4000}
-                        height={4000}
+                        height={5000}
                         className="rounded-3xl"
+                        style={{}}
                       ></video>
                       <div className="ml-8">
                         <h1 className="text-white text-2xl my-3 name">

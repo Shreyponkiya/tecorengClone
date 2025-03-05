@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Industries from "./Video_Component/Industries";
 import Appreciation from "./Video_Component/Appreciation";
 import Form from "./Video_Component/Form";
@@ -10,21 +10,76 @@ import Why_tecoreng from "./Video_Component/Why_tecoreng";
 import Services from "./Video_Component/Services";
 import Innovation from "./Video_Component/Innovation";
 import Development from "./Video_Component/Development";
-import Insights from "./Video_Component/Insights"
+import Insights from "./Video_Component/Insights";
 import "../App.css";
 import "./Video.css";
 
 const Video = () => {
+  const fullScreenVideoRef = useRef(null); // Reference for the full-screen video
+  const [isFullScreen, setIsFullScreen] = useState(false); // Track full-screen state
+
   const handleFull = () => {
-    const video = (document.getElementById("full").src =
-      "Tecoreng_fullVideo.mp4");
-    document.getElementById("full").requestFullscreen();
+    // Create video element only if it doesn't exist
+    if (!fullScreenVideoRef.current) {
+      const fullScreenVideo = document.createElement("video");
+      fullScreenVideo.src = "Tecoreng_fullVideo.mp4";
+      fullScreenVideo.controls = true;
+      fullScreenVideo.autoplay = true;
+      fullScreenVideo.style.position = "fixed";
+      fullScreenVideo.style.top = "0";
+      fullScreenVideo.style.left = "0";
+      fullScreenVideo.style.width = "0vw";
+      fullScreenVideo.style.height = "0vh";
+      fullScreenVideo.style.zIndex = "9999";
+      fullScreenVideo.style.backgroundColor = "black";
+
+      document.body.appendChild(fullScreenVideo);
+      fullScreenVideoRef.current = fullScreenVideo; // Save reference
+      setIsFullScreen(true); // Mark full-screen mode active
+
+      // Request full-screen mode
+      if (fullScreenVideo.requestFullscreen) {
+        fullScreenVideo.requestFullscreen();
+      } else if (fullScreenVideo.mozRequestFullScreen) {
+        fullScreenVideo.mozRequestFullScreen();
+      } else if (fullScreenVideo.webkitRequestFullscreen) {
+        fullScreenVideo.webkitRequestFullscreen();
+      } else if (fullScreenVideo.msRequestFullscreen) {
+        fullScreenVideo.msRequestFullscreen();
+      }
+
+      // Listen for ESC key
+      document.addEventListener("keydown", handleEscape);
+      fullScreenVideo.onended = removeVideo; // Remove when the video ends
+    }
   };
+
+  // Handle ESC press logic
+  const handleEscape = (event) => {
+    if (event.key === "Escape") {
+      if (isFullScreen) {
+        // First ESC press: Exit full-screen
+        document.exitFullscreen();
+        setIsFullScreen(false);
+      } else {
+        // Second ESC press: Remove the video
+        removeVideo();
+      }
+    }
+  };
+
+  // Remove video from the DOM
+  const removeVideo = () => {
+    if (fullScreenVideoRef.current) {
+      document.body.removeChild(fullScreenVideoRef.current);
+      fullScreenVideoRef.current = null;
+      setIsFullScreen(false);
+      document.removeEventListener("keydown", handleEscape);
+    }
+  };
+
   return (
-    <div
-      className="relative h-96 items-center justify-center top-165 "
-      id="main-size"
-    >
+    <div className="relative h-96 items-center justify-center top-165" id="main-size">
       <div className="flex justify-center items-center mb-6">
         <div className="w-6/7" id="size-div">
           <video
@@ -37,7 +92,7 @@ const Video = () => {
             muted
             content="video/mp4"
           ></video>
-            {/* full screen div*/}
+          {/* Full-screen play button */}
           <div
             className="h-25 w-25 flex justify-center italic rounded-full absolute top-145 right-40 z-50 bg-gradient-to-l from-gray-700"
             style={{ backgroundColor: "#01132e" }}
@@ -68,7 +123,7 @@ const Video = () => {
           <div className="relative top-100" id="other-div">
             <Industries />
             <Appreciation />
-            <Insights/>
+            <Insights />
             <Form />
           </div>
         </div>
@@ -77,4 +132,5 @@ const Video = () => {
     </div>
   );
 };
+
 export default Video;

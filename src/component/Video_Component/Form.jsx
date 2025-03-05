@@ -81,7 +81,7 @@ const Form = () => {
               </div>
             </div>
           </div>
-          <div className="h-210 bg-white rounded-4xl mb-20" id="form-size">
+          <div className="h-220 bg-white rounded-4xl mb-20" id="form-size">
             <div className="m-10">
               <h1 className="text-6xl font-semibold inner-name1">
                 Get in{" "}
@@ -200,5 +200,4 @@ const Form = () => {
     </div>
   );
 };
-
 export default Form;

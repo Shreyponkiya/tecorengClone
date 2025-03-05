@@ -7,3 +7,83 @@
         font-size: 0.8rem;
     }
 }
+  
+.floating-ball {
+    will-change: transform;
+    height: 50px;
+    width: 75px;
+    animation: floatBall 8s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform-origin: center center;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .floating-ball {
+      animation-duration: 8s;
+    }
+  }
+  
+@keyframes floatBall {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    4.17% {
+      transform: translate(17px, -10px) rotate(15deg);
+    }
+    8.33% {
+      transform: translate(35px, -20px) rotate(30deg);
+    }
+    12.5% {
+      transform: translate(57px, -25px) rotate(40deg);
+    }
+    16.67% {
+      transform: translate(80px, -20px) rotate(60deg);
+    }
+    20.83% {
+      transform: translate(105px, -10px) rotate(75deg);
+    }
+    22.83% {
+      transform: translate(110px, -8px) rotate(80deg);
+    }
+    25% {
+      transform: translate(115px, -7px) rotate(90deg);
+    }
+    33.33% {
+      transform: translate(85px, 45px) rotate(120deg);
+    }
+    41.67% {
+      transform: translate(25px, 47px) rotate(150deg);
+    }
+    50% {
+      transform: translate(-5px, -5px) rotate(180deg);
+    }
+    58.33% {
+      transform: translate(-45px, -25px) rotate(210deg);
+    }
+    66.67% {
+      transform: translate(-90px, -25px) rotate(240deg);
+    }
+    70%{
+        transform: translate(-100px, -28px) rotate(245deg);
+    }
+    75% {
+      transform: translate(-170px, 0px) rotate(270deg);
+    }
+    79% {
+      transform: translate(-160px, 10px) rotate(270deg);
+    }
+    81% {
+      transform: translate(-145px, 30px) rotate(270deg);
+    }
+    83.33% {
+      transform: translate(-120px, 50px) rotate(300deg);
+    }
+    91.67% {
+      transform: translate(-55px, 40px) rotate(330deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
